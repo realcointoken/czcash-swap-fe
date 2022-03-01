@@ -33,6 +33,7 @@ export default memo(function SwapRoute({ trade }: { trade: Trade }) {
           </Fragment>
         )
       })}
+      These trades use Pancakeswap.
     </Flex>
   )
 })
