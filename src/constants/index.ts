@@ -14,7 +14,6 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DEFAULTTOKEN = '0xE68b79e51bf826534Ff37AA9CeE71a3842ee9c70'
 export const CZUSD = new Token(
   ChainId.MAINNET,
   '0xE68b79e51bf826534Ff37AA9CeE71a3842ee9c70',

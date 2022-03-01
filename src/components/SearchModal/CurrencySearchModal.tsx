@@ -23,7 +23,7 @@ export default function CurrencySearchModal({
   onCurrencySelect,
   selectedCurrency,
   otherSelectedCurrency,
-  showCommonBases = false
+  showCommonBases = true
 }: CurrencySearchModalProps) {
   const [listView, setListView] = useState<boolean>(false)
   const lastOpen = useLast(isOpen)
@@ -36,19 +36,13 @@ export default function CurrencySearchModal({
 
   const handleCurrencySelect = useCallback(
     (currency: Currency) => {
+      console.log("CURRENCY",currency)
       onCurrencySelect(currency)
       onDismiss()
     },
     [onDismiss, onCurrencySelect]
   )
 
-  const handleClickChangeList = useCallback(() => {
-    ReactGA.event({
-      category: 'Lists',
-      action: 'Change Lists'
-    })
-    setListView(true)
-  }, [])
   const handleClickBack = useCallback(() => {
     ReactGA.event({
       category: 'Lists',
@@ -74,7 +68,6 @@ export default function CurrencySearchModal({
           isOpen={isOpen}
           onDismiss={onDismiss}
           onCurrencySelect={handleCurrencySelect}
-          onChangeList={handleClickChangeList}
           selectedCurrency={selectedCurrency}
           otherSelectedCurrency={otherSelectedCurrency}
           showCommonBases={showCommonBases}

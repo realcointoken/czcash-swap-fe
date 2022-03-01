@@ -2,7 +2,6 @@ import useENS from '../../hooks/useENS'
 import { parseUnits } from '@ethersproject/units'
 import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from '@pancakeswap/sdk'
 import { ParsedQs } from 'qs'
-import { DEFAULTTOKEN } from '../../constants'
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useActiveWeb3React } from '../../hooks'
@@ -201,10 +200,10 @@ function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'ETH') return 'ETH'
-    if (valid === false) return 'ETH'
+    if (urlParam.toUpperCase() === 'BNB') return 'BNB'
+    if (valid === false) return 'BNB'
   }
-  return DEFAULTTOKEN ?? ''
+  return 'BNB' ?? ''
 }
 
 function parseTokenAmountURLParameter(urlParam: any): string {

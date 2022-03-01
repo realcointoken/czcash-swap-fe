@@ -10,9 +10,6 @@ import QuestionHelper from '../QuestionHelper'
 import { RowBetween, RowFixed } from '../Row'
 import FormattedPriceImpact from './FormattedPriceImpact'
 import SwapRoute from './SwapRoute'
-// import { useActiveWeb3React } from '../../hooks'
-import useCZUSDPrice from '../../utils/useCZUSDPrice'
-// import { UNI } from '../../constants'
 
 
 
@@ -24,8 +21,6 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
   // const { chainId } = useActiveWeb3React()
   const inputToken = trade.inputAmount.currency
   const outputToken = trade.outputAmount.currency
-  const usdcOutputPrice = useCZUSDPrice(outputToken)
-  const usdcInputPrice = useCZUSDPrice(inputToken)
   
   return (
     <>
@@ -58,19 +53,6 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
         </RowBetween>
         <RowBetween>
           <RowFixed>
-          <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-            {'USD Rate'}
-            </TYPE.black>
-            <QuestionHelper text="This is the value of token A in CZUSD" />
-          </RowFixed>
-          <RowFixed>
-          <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-          {'1 ' + inputToken.symbol + ' = $' + usdcInputPrice?.toFixed(2)}
-          </TYPE.black>
-          </RowFixed>
-        </RowBetween>
-        <RowBetween>
-          <RowFixed>
             <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
               {isExactIn ? 'Minimum received' : 'Maximum sold'}
             </TYPE.black>
@@ -79,7 +61,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
           <RowFixed>
             <TYPE.black color={theme.text1} fontSize={14}> 
               {isExactIn
-                ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol} ${'/ $' + (Number(slippageAdjustedAmounts?.OUTPUT?.toSignificant(4)) * Number(usdcOutputPrice?.toFixed(2))).toFixed(2)} ` ??
+                ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol} ` ??
                   '-'
                 : `${slippageAdjustedAmounts[Field.INPUT]?.toSignificant(4)} ${trade.inputAmount.currency.symbol}` ??
                   '-'}
