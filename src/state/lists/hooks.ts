@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { AppState } from '../index'
 import {DEFAULT_TOKEN_LIST_URL} from '../../constants/lists'
+import DEFAULT_TOKEN_LIST from '../../czodiac.tokenlist.json'
 
 type TagDetails = Tags[keyof Tags]
 export interface TagInfo extends TagDetails {
@@ -114,4 +115,10 @@ export function useAllLists(): TokenList[] {
         .filter((l): l is TokenList => Boolean(l)),
     [lists]
   )
+}
+
+// used to hide warnings on import for default tokens
+export function useDefaultTokenList(): TokenAddressMap {
+
+  return listToTokenMap(DEFAULT_TOKEN_LIST)
 }
