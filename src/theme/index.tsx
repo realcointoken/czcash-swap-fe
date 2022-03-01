@@ -208,7 +208,9 @@ html {
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
-  background: url(${BackgroundImage})
+  background: url(${BackgroundImage});
+  background-size: cover;
+  min-height: 100vh;
 }
 
 
