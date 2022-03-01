@@ -3,6 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import { routerv2 } from '../pcs_address.json'
 
 import { injected, walletconnect, walletlink } from '../connectors'
+import { WrappedTokenInfo } from '../state/lists/hooks'
 //fortmatic, portis, walletconnect, walletlink, lattice
 export const ROUTER_ADDRESS: { [key: string]: string } = {
   [ChainId.MAINNET]: routerv2,
@@ -22,27 +23,39 @@ export const CZUSD = new Token(
   'CZodiac Stablecoin'
 )
 
-export const CZF = new Token(
-  ChainId.MAINNET,
-  '0x7c1608C004F20c3520f70b924E2BfeF092dA0043',
-  18,
-  'CZF',
-  'CZodiac Farming'
+export const CZF = new WrappedTokenInfo(
+  {
+    chainId:56,
+    address:"0x7c1608C004F20c3520f70b924E2BfeF092dA0043",
+    name: "CZodiac Farm",
+    decimals:18,
+    symbol:"CZF",
+    logoURI:"https://cz.cash/images/tokens/CZF.png"
+  },[]
 )
-export const DAMP = new Token(
-  ChainId.MAINNET,
-  '0xA59d649B5e3Bbb1390141C3c25c255FAA909A81F',
-  18,
-  'DAMP',
-  'DampIt'
+
+export const DAMP = new WrappedTokenInfo(
+  {
+    chainId:56,
+    address:"0xA59d649B5e3Bbb1390141C3c25c255FAA909A81F",
+    name: "DampIt",
+    decimals:18,
+    symbol:"DAMP",
+    logoURI:"https://cz.cash/images/tokens/DAMP.png"
+  },[]
 )
-export const KYIV = new Token(
-  ChainId.MAINNET,
-  '0x390D9613bA4E1352cBCc289a6629139bdE0cD321',
-  18,
-  'KYIV',
-  'UkrainianTribe.com'
+
+export const KYIV = new WrappedTokenInfo(
+  {
+    chainId:56,
+    address:"0x390D9613bA4E1352cBCc289a6629139bdE0cD321",
+    name: "UkrainianTribe.com",
+    decimals:18,
+    symbol:"KYIV",
+    logoURI:"https://cz.cash/images/tokens/KYIV.png"
+  },[]
 )
+
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
 export const BUSD = new Token(ChainId.MAINNET, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
