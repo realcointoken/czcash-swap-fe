@@ -1,8 +1,8 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-02-27T00:00:00Z",
+  "timestamp": "2022-02-27T01:00:00Z",
   "version": {
-    "major": 1,
+    "major": 2,
     "minor": 1,
     "patch": 0
   },
@@ -353,6 +353,38 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x42f6f551ae042cbe50c739158b4f0cac0edb9096.png"
+    },
+    {
+      "name": "DampIt",
+      "symbol": "DAMP",
+      "address": "0xA59d649B5e3Bbb1390141C3c25c255FAA909A81F",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/DAMP.png"
+    },
+    {
+      "name": "UkrainianTribe.com",
+      "symbol": "KYIV",
+      "address": "0x390D9613bA4E1352cBCc289a6629139bdE0cD321",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/KYIV.png"
+    },
+    {
+      "name": "CZodiac USD",
+      "symbol": "CZUSD",
+      "address": "0xE68b79e51bf826534Ff37AA9CeE71a3842ee9c70",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/CZUSD.png"
+    },
+    {
+      "name": "CZodiac Farm",
+      "symbol": "CZF",
+      "address": "0x7c1608C004F20c3520f70b924E2BfeF092dA0043",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/CZF.png"
     }
   ]
 }

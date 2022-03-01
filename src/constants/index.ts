@@ -2,7 +2,7 @@ import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { routerv2 } from '../pcs_address.json'
 
-import { injected } from '../connectors'
+import { injected, walletconnect, walletlink } from '../connectors'
 //fortmatic, portis, walletconnect, walletlink, lattice
 export const ROUTER_ADDRESS: { [key: string]: string } = {
   [ChainId.MAINNET]: routerv2,
@@ -28,6 +28,20 @@ export const CZF = new Token(
   18,
   'CZF',
   'CZodiac Farming'
+)
+export const DAMP = new Token(
+  ChainId.MAINNET,
+  '0xA59d649B5e3Bbb1390141C3c25c255FAA909A81F',
+  18,
+  'DAMP',
+  'DampIt'
+)
+export const KYIV = new Token(
+  ChainId.MAINNET,
+  '0x390D9613bA4E1352cBCc289a6629139bdE0cD321',
+  18,
+  'KYIV',
+  'UkrainianTribe.com'
 )
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
@@ -78,13 +92,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WBNB_ONLY,
-  [ChainId.MAINNET]: [CZUSD, CZF, BUSD]
+  [ChainId.MAINNET]: [CZUSD, CZF, KYIV, DAMP]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WBNB_ONLY,
-  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], CZUSD, CZF, DAI, BUSD, BTCB, USDT]
+  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], CZUSD, CZF, KYIV, DAMP]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -123,7 +137,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     description: 'Easy-to-use browser extension.',
     href: null,
     color: '#E8831D'
-  } /*,
+  } ,
   WALLET_CONNECT: {
     connector: walletconnect,
     name: 'WalletConnect',
@@ -133,15 +147,6 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     color: '#4196FC',
     mobile: true
   },
-  LATTICE: {
-    connector: lattice,
-    name: 'Lattice',
-    iconName: 'gridPlusWallet.png',
-    description: 'Connect to GridPlus Wallet.',
-    href: null,
-    color: '#40a9ff',
-    mobile: true
-  },
   WALLET_LINK: {
     connector: walletlink,
     name: 'Coinbase Wallet',
@@ -149,6 +154,15 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     description: 'Use Coinbase Wallet app on mobile device',
     href: null,
     color: '#315CF5'
+  },
+  /*LATTICE: {
+    connector: lattice,
+    name: 'Lattice',
+    iconName: 'gridPlusWallet.png',
+    description: 'Connect to GridPlus Wallet.',
+    href: null,
+    color: '#40a9ff',
+    mobile: true
   },
   COINBASE_LINK: {
     name: 'Open in Coinbase Wallet',
