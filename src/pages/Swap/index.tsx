@@ -1,6 +1,6 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
-import { ArrowDown } from 'react-feather'
+import { ArrowDown, Settings } from 'react-feather'
 import ReactGA from 'react-ga'
 import { Text } from 'rebass'
 import { useTranslation } from 'react-i18next'
@@ -20,7 +20,6 @@ import TradePrice from '../../components/swap/TradePrice'
 import TokenWarningModal from '../../components/TokenWarningModal'
 import ProgressSteps from '../../components/ProgressSteps'
 
-import { INITIAL_ALLOWED_SLIPPAGE } from '../../constants'
 import { useActiveWeb3React } from '../../hooks'
 import { useCurrency, useDefaultTokens } from '../../hooks/Tokens'
 import { ApprovalState, useApproveCallbackFromTrade } from '../../hooks/useApproveCallback'
@@ -353,13 +352,13 @@ export default function Swap() {
                       />
                     </RowBetween>
                   )}
-                  {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
+                  {!!allowedSlippage && (
                     <RowBetween align="center">
                       <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
                         Slippage Tolerance
                       </ClickableText>
-                      <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
-                        {allowedSlippage / 100}%
+                      <ClickableText style={{cursor:"pointer"}} fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
+                        {allowedSlippage / 100}% <Settings style={{height:"1em",position:"relative",top:"1px"}} />
                       </ClickableText>
                     </RowBetween>
                   )}

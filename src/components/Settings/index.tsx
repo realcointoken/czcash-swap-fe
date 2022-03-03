@@ -65,14 +65,7 @@ const StyledMenuButton = styled.button`
 
   svg {
     margin-top: 2px;
-  }
-`
-const EmojiWrapper = styled.div`
-  position: absolute;
-  bottom: -6px;
-  right: 0px;
-  font-size: 14px;
-`
+  }`
 
 const StyledMenu = styled.div`
   margin-left: 0.5rem;
@@ -101,10 +94,13 @@ const MenuFlyout = styled.span`
   right: 0rem;
   z-index: 100;
 
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    min-width: 18.125rem;
-    right: -46px;
-  `};
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    position:fixed;
+    top:20px;
+    right:0px;
+    max-width:100%;
+    width:290px;
+  `}; 
 `
 
 const Break = styled.div`
@@ -183,16 +179,10 @@ export default function SettingsTab() {
       </Modal>
       <StyledMenuButton onClick={toggle} id="open-settings-dialog-button">
         <StyledMenuIcon />
-        {expertMode && (
-          <EmojiWrapper>
-            <span role="img" aria-label="wizard-icon">
-              🧙
-            </span>
-          </EmojiWrapper>
-        )}
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
+          <StyledCloseIcon style={{position:"absolute",right:"15px",top:"10px",cursor:"pointer"}} onClick={toggle} />
           <AutoColumn gap="md" style={{ padding: '1rem' }}>
             <Text fontWeight={600} fontSize={14}>
               {t('transactionSettings')}
