@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-03-03T02:00:00Z",
+  "timestamp": "2022-03-03T03:00:00Z",
   "version": {
     "major": 3,
-    "minor": 2,
+    "minor": 3,
     "patch": 0
   },
   "tags": {},
@@ -429,7 +429,7 @@
     {
       "name": "Mainstreet",
       "symbol": "MAINST",
-      "address": "0x335F6e0E804B70A96bf9eB8AF31588942e9B2515",
+      "address": "0x8FC1A944c149762B6b578A06c0de2ABd6b7d2B89",
       "chainId": 56,
       "decimals": 9,
       "logoURI": "https://cz.cash/images/tokens/MAINST.png"
