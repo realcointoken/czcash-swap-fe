@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-02-27T01:00:00Z",
+  "timestamp": "2022-03-03T01:00:00Z",
   "version": {
     "major": 2,
-    "minor": 1,
+    "minor": 2,
     "patch": 0
   },
   "tags": {},
@@ -385,6 +385,94 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://cz.cash/images/tokens/CZF.png"
+    },
+    {
+      "name": "GiftedHands",
+      "symbol": "GHD",
+      "address": "0xfDFD27aE39cebefDBaAc8615F18aa68DDD0F15f5",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/GHD.png"
+    },
+    {
+      "name": "InfiniteOne",
+      "symbol": "IF1",
+      "address": "0xfCaC1a3eDE7b55Cc51e3eBff2885a67FBfE01a1A",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://cz.cash/images/tokens/IF1.png"
+    },
+    {
+      "name": "Berry",
+      "symbol": "BRY",
+      "address": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/BRY.png"
+    },
+    {
+      "name": "GuitarSwap",
+      "symbol": "GUT",
+      "address": "0xb6bA8c98021C31A02DD65e9bE97729EbA859d4E2",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/GUT.png"
+    },
+    {
+      "name": "AmpleSwap",
+      "symbol": "AMPLE",
+      "address": "0x335F6e0E804B70A96bf9eB8AF31588942e9B2515",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/AMPLE.png"
+    },
+    {
+      "name": "Mainstreet",
+      "symbol": "MAINST",
+      "address": "0x335F6e0E804B70A96bf9eB8AF31588942e9B2515",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://cz.cash/images/tokens/MAINST.png"
+    },
+    {
+      "name": "DeapCoin",
+      "symbol": "DEP",
+      "address": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/DEP.png"
+    },
+    {
+      "name": "Olive",
+      "symbol": "OLIVE",
+      "address": "0x617724974218A18769020A70162165A539c07E8a",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/OLIVE.png"
+    },
+    {
+      "name": "ChainWars",
+      "symbol": "CWE",
+      "address": "0x9c6b7221cDDA3b8136fbF9D27ac07AeeCC1087B5",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/CWE.png"
+    },
+    {
+      "name": "WalletNow",
+      "symbol": "WNOW",
+      "address": "0x56AA0237244C67B9A854B4Efe8479cCa0B105289",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/WNOW.png"
+    },
+    {
+      "name": "DonkSwap",
+      "symbol": "DST",
+      "address": "0x3969Fe107bAe2537cb58047159a83C33dfbD73f9",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://cz.cash/images/tokens/DST.png"
     }
   ]
 }
