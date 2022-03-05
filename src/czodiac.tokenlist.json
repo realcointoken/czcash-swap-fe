@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-03-03T03:00:00Z",
+  "timestamp": "2022-03-03T04:00:00Z",
   "version": {
     "major": 3,
-    "minor": 3,
+    "minor": 4,
     "patch": 0
   },
   "tags": {},
@@ -281,14 +281,6 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x52ce071bd9b1c4b00a0b92d298c512478cad67e8.png"
-    },
-    {
-      "name": "Berry",
-      "symbol": "BRY",
-      "address": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
-      "chainId": 56,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830.png"
     },
     {
       "name": "Sushi",
