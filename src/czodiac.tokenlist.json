@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-03-03T05:00:00Z",
+  "timestamp": "2022-03-13T01:00:00Z",
   "version": {
     "major": 3,
-    "minor": 5,
+    "minor": 6,
     "patch": 0
   },
   "tags": {},
@@ -465,6 +465,14 @@
       "chainId": 56,
       "decimals": 9,
       "logoURI": "https://cz.cash/images/tokens/DST.png"
+    },
+    {
+      "name": "Jade",
+      "symbol": "JADE",
+      "address": "0x7ad7242A99F21aa543F9650A56D141C57e4F6081",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://cz.cash/images/tokens/JADE.png"
     }
   ]
 }
