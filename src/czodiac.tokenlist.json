@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2022-03-13T01:00:00Z",
+  "timestamp": "2022-03-14T01:00:00Z",
   "version": {
     "major": 3,
-    "minor": 6,
+    "minor": 7,
     "patch": 0
   },
   "tags": {},
@@ -492,7 +492,7 @@
     },
     {
       "name": "ARTH USD Rebase",
-      "symbol": "ARTH.usd",
+      "symbol": "ARTHusd",
       "address": "0x88fd584dF3f97c64843CD474bDC6F78e398394f4",
       "chainId": 56,
       "decimals": 18,
